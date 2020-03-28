@@ -1,4 +1,4 @@
-import { ContainerState, ContainerActions } from './types';
+import { ContainerActions, ContainerState } from './types';
 import ActionTypes from './constants';
 
 // The initial state of the App

@@ -1,6 +1,5 @@
 import { ActionType } from 'typesafe-actions';
 import * as actions from './actions';
-import { Repo } from '../RepoListItem/types';
 
 /* --- STATE --- */
 
@@ -12,7 +11,7 @@ interface AppState {
 }
 
 interface UserData {
-  readonly repos?: Repo[];
+  readonly repos?: string[];
 }
 
 /* --- ACTIONS --- */

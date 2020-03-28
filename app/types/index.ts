@@ -6,11 +6,11 @@ import { SagaInjectionModes } from 'redux-injectors';
 import { ContainerState as LanguageProviderState } from 'containers/LanguageProvider/types';
 import { ContainerState as AppState } from 'containers/App/types';
 import { ContainerState as HomeState } from 'containers/HomePage/types';
-// [IMPORT NEW CONTAINERSTATE ABOVE] < Needed for generating containers seamlessly
 
 export interface InjectedStore extends Store {
   injectedReducers: any;
   injectedSagas: any;
+
   runSaga(saga: Saga<any[]> | undefined, args: any | undefined): any;
 }
 
@@ -31,8 +31,5 @@ export interface ApplicationRootState {
   readonly global: AppState;
   readonly language: LanguageProviderState;
   readonly home: HomeState;
-  // [INSERT NEW REDUCER KEY ABOVE] < Needed for generating containers seamlessly
-
-  // for testing purposes
   readonly test: any;
 }
